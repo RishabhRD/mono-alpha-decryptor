@@ -11,13 +11,17 @@ cmake and catch2(for testing).
 ## Installation
 
 ```bash
-cmake .
+mkdir -p bin
+cd bin
+cmake ..
 make
 ```
 
 ## To run tests
 ```bash
-cmake .
+mkdir -p bin
+cd bin
+cmake ..
 make
 make test
 ```
@@ -25,7 +29,9 @@ make test
 Or
 
 ```bash
-cmake .
+mkdir -p bin
+cd bin
+cmake ..
 make
 ./tests
 ```
