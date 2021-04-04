@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/rishabh/Documents/iiit-dwd/ACN/monoalphabetic-decrypt/bin",
+  "command": "/usr/bin/c++  -I/home/rishabh/Documents/iiit-dwd/ACN/monoalphabetic-decrypt/include -I/usr/include/libnl3 -std=gnu++17 -o CMakeFiles/monodec.dir/src/CyclicEncryptor.cc.o -c /home/rishabh/Documents/iiit-dwd/ACN/monoalphabetic-decrypt/src/CyclicEncryptor.cc",
+  "file": "/home/rishabh/Documents/iiit-dwd/ACN/monoalphabetic-decrypt/src/CyclicEncryptor.cc"
+}
+]
