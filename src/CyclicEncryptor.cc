@@ -31,3 +31,7 @@ std::string CyclicEncryptor::encrypt(const std::string &str) const {
   std::for_each(str.begin(), str.end(), pushResultCharToString);
   return result;
 }
+
+bool CyclicEncryptor::isValidChar(char c) const noexcept{
+  return c >= 'a' && c <= 'z';
+}

@@ -9,7 +9,5 @@ class CyclicEncryptor : public Encryptor{
     int seed;
     std::array<char, 26> charMapping;
     char getMappingFor(char c) const;
-    bool isValidChar(char c) const{
-      return c >= 'a' && c <= 'z';
-    }
+    bool isValidChar(char c) const noexcept;
 };
