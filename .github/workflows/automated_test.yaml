@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: dependency
-        run: sudo apt-get update && sudo apt-get install g++
+        run: sudo apt-get update && sudo apt-get install g++ catch2
       - name: Configure cmake
         run: |
           cd ${{ github.workspace }}
