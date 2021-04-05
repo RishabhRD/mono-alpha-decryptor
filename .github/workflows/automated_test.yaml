@@ -24,6 +24,7 @@ jobs:
           mkdir build
           cd build
           cmake ..
+          make
           ./tests
         id: run_tests
       - name: Slack Notification
