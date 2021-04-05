@@ -1,3 +1,4 @@
+
 name: unit_testing
 
 on:
@@ -10,13 +11,12 @@ jobs:
     name: Unit Test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Configure cmake
         run: |
-          cd ${{ github.workspace }}/..
+          cd ${{ github.workspace }}
           mkdir build
           cd build
-          echo "::set-output name=mix-test::$(ls ..)"
-          echo "::set-output name=mix-test::$(ls)"
           cmake ..
           ./tests
         id: run_tests
