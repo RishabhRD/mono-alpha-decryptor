@@ -1,13 +1,13 @@
-name: unit_testing
+name: main_build
 
 on:
   push:
-    branches-ignore:    
+    branches:
       - master
 
 jobs:
   test:
-    name: Unit Test
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,3 +28,9 @@ jobs:
           make
           ./tests
         id: run_tests
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@master
+        env:
+          SLACK_MESSAGE: ${{join(steps.run_tests.outputs.*, '\n')}}
+          SLACK_TITLE: CI Test Suite
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

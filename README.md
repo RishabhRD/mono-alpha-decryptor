@@ -1,6 +1,6 @@
 # mono-alphabetic-decryptor
 
-![Unit Tests](https://github.com/RishabhRD/mon-alpha-decryptor/actions/workflows/automated_test.yaml/badge.svg)
+![Unit Tests](https://github.com/RishabhRD/mon-alpha-decryptor/actions/workflows/main_build.yaml/badge.svg)
 
 This is a decryptor that shows a proof of concept of encryption with a secret
 key with one-to-one character mapping is not safe.
