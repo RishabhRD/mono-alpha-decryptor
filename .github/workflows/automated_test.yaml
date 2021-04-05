@@ -15,6 +15,7 @@ jobs:
           cd ${{ github.workspace }}
           mkdir build
           cd build
+          ls ..
           cmake ..
           ./tests
 
