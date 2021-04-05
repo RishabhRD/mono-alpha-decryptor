@@ -16,14 +16,14 @@ jobs:
           sudo apt-get update && sudo apt-get install g++
           git clone https://github.com/catchorg/Catch2.git
           cd Catch2
-          cmake -Bbuild -H. -DBUILD_TESTING=OFF
+          cmake -Bbuild -H. -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX:PATH=/usr
           sudo cmake --build build/ --target install 
       - name: Configure cmake
         run: |
           cd ${{ github.workspace }}
           mkdir build
           cd build
-          cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+          cmake ..
           make
           ./tests
         id: run_tests
