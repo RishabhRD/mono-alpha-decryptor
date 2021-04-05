@@ -16,8 +16,6 @@ jobs:
           mkdir build
           cd build
           echo "::set-output name=mix-test::$(ls ..)"
-          cmake ..
-          ./tests
         id: run_tests
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@master
