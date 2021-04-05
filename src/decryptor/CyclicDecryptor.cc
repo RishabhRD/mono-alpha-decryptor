@@ -7,7 +7,7 @@ CyclicDecryptor::CyclicDecryptor(Encryptor &encryptor) {
   const std::string rawMessage = "abcdefghijklmnopqrstuvwxyz";
   const std::string encryptedMessage = encryptor.encrypt(rawMessage);
   auto size = rawMessage.size();
-  // TODO: Get the way to not use raw loops change
+  // TODO: Get the way to not use raw loops
   for (int i = 0; i < size; i++) {
     charMapping[encryptedMessage[i]] = rawMessage[i];
   }
