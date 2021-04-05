@@ -2,24 +2,19 @@ name: unit_testing
 
 on:
   push:
-    branches:    
-      - '*'
-      - '*/*'
-      - '**'
-      - '!master'
+    branches-ignore:    
+      - master
 
 jobs:
   test:
+    name: Unit Test
     runs-on: ubuntu-latest
-
     steps:
-      - name: Create Build Environment
-        run: cmake -E make_directory ${{github.workspace}}/build
-      - name: Configure CMake
-        shell: bash
-        working-directory: ${{github.workspace}}/build
-      - name: Run tests
-        run:
-          - cmake ..
-          - make
-          - ./tests
+      - name: Configure cmake
+        run: |
+          cd ${{ github.workspace }}
+          mkdir build
+          cd build
+          cmake ..
+          ./tests
+
